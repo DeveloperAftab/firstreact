@@ -31,3 +31,8 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
+    - name: Install surge 
+      run: npm install -g surge
+    - name: Run surge
+      run: surge ./ bootcamp_setup_aftabali_aic035156.surge.sh --token ${{ secrets.SURGE_TOKEN }}
